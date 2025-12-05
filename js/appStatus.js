@@ -24,6 +24,7 @@ function exportAppStatus() {
 	var inanimateObject = document.getElementById("inanimateObjectsCurrent").innerHTML;
 	var cockType = document.getElementById("cockTypeCurrent").innerHTML;
 	var sex = localStorage.getItem("Slot0_Sex");
+	var voice = localStorage.getItem("Slot0_voice");
 	var thirdSex = localStorage.getItem("Slot0_Third_Sex");
 	
 	// Checkboxes
@@ -667,4 +668,5 @@ function importAppStatus() {
 function hideAppStatusImportMessage() {
 	document.getElementById("appStatusImportMessage").innerHTML = "Insert app settings and click Import";
 	document.getElementById("appStatusImportMessage").style.color = "#fff";
+
 }
