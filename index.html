@@ -1032,21 +1032,44 @@ if ("serviceWorker" in navigator) {
 			
 		<div class="containerRBMale" id="containerRBMale">
 		<label class="container" id="RBMaleContainer">High pitch
+			<input type="radio" name="voice" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonhigh">
+			<span class="radiobuttonhigh"></span>
+		</label>
+		</div>
+		
+		<div class="containerRBFemaleAndOther" id="containerRBFemale">
+		<label class="container" id="RBFemaleContainer">Low pitch
+			<input type="radio" name="voice" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonlow">
+			<span class="radiobuttonlow"></span>
+		</label>
+		</div>
+		
+	</div>
+	
+</div>
+
+<div class="menu" id="Morningwood">
+
+	<div class="speciesText">
+	Morning wood
+	</div>
+	
+	<div class="selectMenuContainer2">
+		<div class="linesSex">
+			<img src="images/lines.png" height="17" width="23" id="linesNormal"> 
+		</div>
+			
+			
+		<div class="containerRBMale" id="containerRBMale">
+		<label class="container" id="RBMaleContainer">Yes
 			<input type="radio" name="sex" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonMale">
 			<span class="radiobuttonMale"></span>
 		</label>
 		</div>
 		
 		<div class="containerRBFemaleAndOther" id="containerRBFemale">
-		<label class="container" id="RBFemaleContainer">Low pitch
+		<label class="container" id="RBFemaleContainer">No
 			<input type="radio" name="sex" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonFemale">
-			<span class="radiobuttonFemale"></span>
-		</label>
-		</div>
-		
-		<div class="containerRBFemaleAndOther" id="containerRBOther" style="display:none">
-		<label class="container" id="RBOtherContainer"><div id="thirdSexValue">Other</div>
-			<input type="radio" name="sex" onClick="saveSex('Other');" id="radiobuttonOther">
 			<span class="radiobuttonFemale"></span>
 		</label>
 		</div>
@@ -5207,6 +5230,7 @@ startup = "False";
 </body>
 
 </html>
+
 
 
 
