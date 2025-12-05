@@ -399,7 +399,7 @@ if ("serviceWorker" in navigator) {
 			<div class="speciesEntryLeft" onClick="setSpeciesTo('Gardevoir');"><div class="speciesEntryText">Gardevoir</div></div>
 			<div class="speciesEntryRight" onClick="setSpeciesTo('Glaceon');"><div class="speciesEntryText">Glaceon</div></div>
 			<div class="speciesEntryLeft" onClick="setSpeciesTo('Incineroar');"><div class="speciesEntryText">Incineroar</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Jolteon');"><div class="speciesEntryText">Jolteon</div></div>
+			<div class="speciesEntryRight" onClick="setSpeciesTo('flygon');"><div class="speciesEntryText">flygon</div></div>
 			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Jynx');"><div class="speciesEntryText">Jynx</div></div>
 			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Koraidon');"><div class="speciesEntryText">Koraidon</div></div>
 			
@@ -872,7 +872,7 @@ if ("serviceWorker" in navigator) {
 <div class="menuInanimateObjects" id="inanimateObjectsMenu" style="display:none">
 
 	<div class="speciesText">
-	bee gymnastics
+	fetishes
 	</div>
 
 	<div class="selectMenuContainer">
@@ -1017,6 +1017,44 @@ if ("serviceWorker" in navigator) {
 	</div>
 	
 </div>
+
+<div class="menu" id="voicemenu">
+
+	<div class="speciesText">
+	Voice
+	</div>
+	
+	<div class="selectMenuContainer2">
+		<div class="linesSex">
+			<img src="images/lines.png" height="17" width="23" id="linesNormal"> 
+		</div>
+			
+			
+		<div class="containerRBMale" id="containerRBMale">
+		<label class="container" id="RBMaleContainer">High pitch
+			<input type="radio" name="sex" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonMale">
+			<span class="radiobuttonMale"></span>
+		</label>
+		</div>
+		
+		<div class="containerRBFemaleAndOther" id="containerRBFemale">
+		<label class="container" id="RBFemaleContainer">Low pitch
+			<input type="radio" name="sex" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonFemale">
+			<span class="radiobuttonFemale"></span>
+		</label>
+		</div>
+		
+		<div class="containerRBFemaleAndOther" id="containerRBOther" style="display:none">
+		<label class="container" id="RBOtherContainer"><div id="thirdSexValue">Other</div>
+			<input type="radio" name="sex" onClick="saveSex('Other');" id="radiobuttonOther">
+			<span class="radiobuttonFemale"></span>
+		</label>
+		</div>
+		
+	</div>
+	
+</div>
+
 
 <div class="menu" id="sexMenuError" style="display:none">
 
@@ -5169,5 +5207,6 @@ startup = "False";
 </body>
 
 </html>
+
 
 
