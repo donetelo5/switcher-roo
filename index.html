@@ -81,1584 +81,1575 @@ if ("serviceWorker" in navigator) {
 
 <div class="appWidthContainer" id="appWidthContainer">
 
-<div class="desktop-mode-container">
+	<div class="desktop-mode-container">
 
-<div class="notification-container" id="notificationContainer" style="display:none">
+		<div class="notification-container" id="notificationContainer" style="display:none">
 
-	<div class="notification-content" id="notificationContent">&nbsp;</div>
-	
-	<div class="notification-content" style="margin-top:5px;text-align:center;cursor:pointer;" onClick="closeNotification()">
-		Okay
-	</div>
-	
-</div>
+			<div class="notification-content" id="notificationContent">&nbsp;</div>
 
-<!-- Second slider handle for error 621 --> 
-<div class="secondSliderHandleContainer" id="secondSliderHandleContainer" style="display:none">
-	<div class="secondSliderHandle" id="secondSliderHandle" style="display:none"></div>
-</div>
+			<div class="notification-content" style="margin-top:5px;text-align:center;cursor:pointer;" onClick="closeNotification()">
+				Okay
+			</div>
 
-<!-- Status bar stuff begins here-->
+		</div>
 
-<div class="statusBarContainer" id="statusBarContainer">
+		<!-- Second slider handle for error 621 -->
+		<div class="secondSliderHandleContainer" id="secondSliderHandleContainer" style="display:none">
+			<div class="secondSliderHandle" id="secondSliderHandle" style="display:none"></div>
+		</div>
 
-	<div class="coverageContainer">
-		
-		<div id="coverage4">
-			<img src="images/coverage_4.png" height="16" width="52">
-		</div>
-		
-		<div id="coverage3" style="display:none">
-			<img src="images/coverage_3.png" height="16" width="52">
-		</div>
-		
-		<div id="coverage2" style="display:none">
-			<img src="images/coverage_2.png" height="16" width="52">
-		</div>
-		
-		<div id="coverage1" style="display:none">
-			<img src="images/coverage_1.png" height="16" width="52">
-		</div>
-		
-		<script>	
-		changeCoverageWait();
-		</script>		
-		
-	</div>
-	
-	<div class="currentTime" id="currentTime">
-		6:66 PM	
-	</div>	
-	
-	<div class="welcomeUserMessage" id="welcomeUserMessage" style="display:none">
-		Notices your bulge *OwO*		
-	</div>	
-	
-	<div class="batteryContainer" onClick="batteryCharge()">		
-		
-		<div id="battery_full">
-			<img src="images/battery_full.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_34" style="display:none">
-			<img src="images/battery_34.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_half" style="display:none">
-			<img src="images/battery_half.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_14" style="display:none">
-			<img src="images/battery_14.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_low" style="display:none">
-			<img src="images/battery_low.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_34_charging" style="display:none">
-			<img src="images/battery_34_charging.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_half_charging" style="display:none">
-			<img src="images/battery_half_charging.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_14_charging" style="display:none">
-			<img src="images/battery_14_charging.png" height="14" width="40" align="right">
-		</div>
-		
-		<div id="battery_low_charging" style="display:none">
-			<img src="images/battery_low_charging.png" height="14" width="40" align="right">
-		</div>
-		
-	</div>
+		<!-- Status bar stuff begins here-->
 
-</div>
+		<div class="statusBarContainer" id="statusBarContainer">
 
-<!-- Status bar stuff ends here-->
+			<div class="coverageContainer">
 
-<div class="switcherLogo" onclick="batteryCharge()">
-  <img id="switcherLogo" src="images/logo.png" height="41" width="250" alt="logo"> 
-</div>
-  
-  <div class="adminPerms" id="adminPermsText" style="display:none">
-	ADMINISTRATOR PERMISSIONS: ENABLED
-  </div>  
-  
-  <div class="processingText" id="processingText">
-  
-  </div>
-  
-<div class="container2" id="container2">
-	<div class="lockSettingsImgOpen" id="lockOpen" onclick="closeLock()">
-		<img src="images/lockOpen.png" height="37" width="23"> 
-	</div>
-	
-	<div class="lockSettingsImgClosed" id="lockClosed" onclick="openLockStage1()" style="display:none">
-		<img src="images/lockClosed.png" height="37" width="23"> 
-	</div>
-  
-	<div class="lockSettings" id="lockSettings" onClick="switchLock()">
-		Lock settings
-	</div>
-	
-	<div class="lockSettingsPasswordAndButtonContainer" id="lockSettingsPasswordAndButtonContainer" style="display:none">
-		
-		<div class="smallButton" onClick="openLockStage2()">Proceed</div>
-		<input id="passwordTextFieldOpenLock" class="mediumTextField" value="" style="font-size:16px;padding:2px;margin-top:3px;margin-left:6px;width:68%;">
-		
-	</div>
-	  
-	<div class="processingContainer">  
-		<div class="processingAnim" id="processingAnim">
-		
-			<div id="newProcessingAnimation" style="text-align:center">
-				<div class="sk-chase">
-					<div class="sk-chase-dot"></div>
-					<div class="sk-chase-dot"></div>
-					<div class="sk-chase-dot"></div>
-					<div class="sk-chase-dot"></div>
-					<div class="sk-chase-dot"></div>
-					<div class="sk-chase-dot"></div>
+				<div id="coverage4">
+					<img src="images/coverage_4.png" height="16" width="52">
+				</div>
+
+				<div id="coverage3" style="display:none">
+					<img src="images/coverage_3.png" height="16" width="52">
+				</div>
+
+				<div id="coverage2" style="display:none">
+					<img src="images/coverage_2.png" height="16" width="52">
+				</div>
+
+				<div id="coverage1" style="display:none">
+					<img src="images/coverage_1.png" height="16" width="52">
+				</div>
+
+				<script>
+					changeCoverageWait();
+				</script>
+
+			</div>
+
+			<div class="currentTime" id="currentTime">
+				6:66 PM
+			</div>
+
+			<div class="welcomeUserMessage" id="welcomeUserMessage" style="display:none">
+				Notices your bulge *OwO*
+			</div>
+
+			<div class="batteryContainer" onClick="batteryCharge()">
+
+				<div id="battery_full">
+					<img src="images/battery_full.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_34" style="display:none">
+					<img src="images/battery_34.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_half" style="display:none">
+					<img src="images/battery_half.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_14" style="display:none">
+					<img src="images/battery_14.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_low" style="display:none">
+					<img src="images/battery_low.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_34_charging" style="display:none">
+					<img src="images/battery_34_charging.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_half_charging" style="display:none">
+					<img src="images/battery_half_charging.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_14_charging" style="display:none">
+					<img src="images/battery_14_charging.png" height="14" width="40" align="right">
+				</div>
+
+				<div id="battery_low_charging" style="display:none">
+					<img src="images/battery_low_charging.png" height="14" width="40" align="right">
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Status bar stuff ends here-->
+
+		<div class="switcherLogo" onclick="batteryCharge()">
+			<img id="switcherLogo" src="images/logo.png" height="41" width="250" alt="logo">
+		</div>
+
+		<div class="adminPerms" id="adminPermsText" style="display:none">
+			ADMINISTRATOR PERMISSIONS: ENABLED
+		</div>
+
+		<div class="processingText" id="processingText">
+
+		</div>
+
+		<div class="container2" id="container2">
+			<div class="lockSettingsImgOpen" id="lockOpen" onclick="closeLock()">
+				<img src="images/lockOpen.png" height="37" width="23">
+			</div>
+
+			<div class="lockSettingsImgClosed" id="lockClosed" onclick="openLockStage1()" style="display:none">
+				<img src="images/lockClosed.png" height="37" width="23">
+			</div>
+
+			<div class="lockSettings" id="lockSettings" onClick="switchLock()">
+				Lock settings
+			</div>
+
+			<div class="lockSettingsPasswordAndButtonContainer" id="lockSettingsPasswordAndButtonContainer" style="display:none">
+
+				<div class="smallButton" onClick="openLockStage2()">Proceed</div>
+				<input id="passwordTextFieldOpenLock" class="mediumTextField" value="" style="font-size:16px;padding:2px;margin-top:3px;margin-left:6px;width:68%;">
+
+			</div>
+
+			<div class="processingContainer">
+				<div class="processingAnim" id="processingAnim">
+
+					<div id="newProcessingAnimation" style="text-align:center">
+						<div class="sk-chase">
+							<div class="sk-chase-dot"></div>
+							<div class="sk-chase-dot"></div>
+							<div class="sk-chase-dot"></div>
+							<div class="sk-chase-dot"></div>
+							<div class="sk-chase-dot"></div>
+							<div class="sk-chase-dot"></div>
+						</div>
+					</div>
+
+					<div id="oldProcessingAnimation" style="text-align:center">
+						<img src="images/animation.png" class="rotate" height="50" width="50">
+					</div>
+
+					<script>
+						document.getElementById("processingAnim").style.display = "none";
+						document.getElementById("newProcessingAnimation").style.display = "none";
+					</script>
+
 				</div>
 			</div>
-			
-			<div id="oldProcessingAnimation" style="text-align:center">
-				<img src="images/animation.png" class="rotate" height="50" width="50">
+
+			<div class="logOut" id="logOut">
+				Log out&nbsp;&nbsp;</a>
 			</div>
-			
-			<script>
-			document.getElementById("processingAnim").style.display = "none";
-			document.getElementById("newProcessingAnimation").style.display = "none";
-			</script>
-			
+
 		</div>
-  	</div>
-  
-	<div class="logOut" id="logOut">
-	Log out&nbsp;&nbsp;</a>
-	</div>
-	
-</div>
-  
-<div class="menuFirst" id="speciesMenu">
 
-	<div class="speciesText">
-	Species
-	</div>
+		<div class="menuFirst" id="speciesMenu">
 
-	<div class="selectMenuContainer">
-	
-	<div class="lines">
-		<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="speciesContainer" id="speciesContainer">
-		
-		<div class="speciesCurrentContainer" id="speciesCurrentContainer" onClick="speciesLoadList();">
-		
-			<div class="speciesCurrent" id="speciesCurrent">
-				Default
+			<div class="speciesText">
+				Species
 			</div>
-				
-			<div class="speciesSelectTriangle">
-				<img src="images/speciesSelectTriangle.png" height="14" width="18">
+
+			<div class="selectMenuContainer">
+
+				<div class="lines">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="speciesContainer" id="speciesContainer">
+
+					<div class="speciesCurrentContainer" id="speciesCurrentContainer" onClick="speciesLoadList();">
+
+						<div class="speciesCurrent" id="speciesCurrent">
+							Default
+						</div>
+
+						<div class="speciesSelectTriangle">
+							<img src="images/speciesSelectTriangle.png" height="14" width="18">
+						</div>
+
+					</div>
+
+					<!--
+				 __  __       _
+				|  \/  | __ _(_)_ __    _ __ ___   ___ _ __  _   _
+				| |\/| |/ _` | | '_ \  | '_ ` _ \ / _ \ '_ \| | | |
+				| |  | | (_| | | | | | | | | | | |  __/ | | | |_| |
+				|_|  |_|\__,_|_|_| |_| |_| |_| |_|\___|_| |_|\__,_|
+
+					   -->
+
+					<div class="speciesCategorySelectorContainer" id="speciesCategorySelectorContainer" style="display:none">
+
+						<div class="speciesCategory" onClick="goBackFromCategoryList();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('1');"><div class="speciesCategoryText">Most Popular</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('2');"><div class="speciesCategoryText">Custom</div></div>
+						<div class="speciesCategory" onClick="speciesGoToCategory('3');"><div class="speciesCategoryText">Pocket Monsters A-K</div></div>
+						<div class="speciesCategory" onClick="speciesGoToCategory('4');"><div class="speciesCategoryText">Pocket Monsters L-Z</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('5');"><div class="speciesCategoryText">Aquatic</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('6');"><div class="speciesCategoryText">Arthropod</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('7');"><div class="speciesCategoryText">Avian</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('8');"><div class="speciesCategoryText">Bovine</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('9');"><div class="speciesCategoryText">Canine</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('10');"><div class="speciesCategoryText">Cervine</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('11');"><div class="speciesCategoryText">Equine</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('12');"><div class="speciesCategoryText">Feline</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('13');"><div class="speciesCategoryText">Fictional & VRC</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('14');"><div class="speciesCategoryText">Hybrid</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('15');"><div class="speciesCategoryText">Lagomorph</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('16');"><div class="speciesCategoryText">Marsupial</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('17');"><div class="speciesCategoryText">Mustelid</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('18');"><div class="speciesCategoryText">Reptile</div></div>
+						<div class="speciesEntryLeft" onClick="speciesGoToCategory('19');"><div class="speciesCategoryText">Rodent</div></div>
+						<div class="speciesEntryRight" onClick="speciesGoToCategory('20');"><div class="speciesCategoryText">Ungulate</div></div>
+
+					</div>
+
+					<!--
+				 __  __           _     ____                   _
+				|  \/  | ___  ___| |_  |  _ \ ___  _ __  _   _| | __ _ _ __
+				| |\/| |/ _ \/ __| __| | |_) / _ \| '_ \| | | | |/ _` | '__|
+				| |  | | (_) \__ \ |_  |  __/ (_) | |_) | |_| | | (_| | |
+				|_|  |_|\___/|___/\__| |_|   \___/| .__/ \__,_|_|\__,_|_|
+												  |_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector1" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Most Popular</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('2');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Arctic Fox');"><div class="speciesEntryText">Arctic Fox</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Bat');"><div class="speciesEntryText">Bat</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Bear');"><div class="speciesEntryText">Bear</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Cat');"><div class="speciesEntryText">Cat</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Cheetah');"><div class="speciesEntryText">Cheetah</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Coyote');"><div class="speciesEntryText">Coyote</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Deer');"><div class="speciesEntryText">Deer</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Dog');"><div class="speciesEntryText">Dog</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Dragon');"><div class="speciesEntryText">Dragon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Fennec');"><div class="speciesEntryText">Fennec</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Fox');"><div class="speciesEntryText">Fox</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Horse');"><div class="speciesEntryText">Horse</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Hyena');"><div class="speciesEntryText">Hyena</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Kangaroo');"><div class="speciesEntryText">Kangaroo</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Lion');"><div class="speciesEntryText">Lion</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Lynx');"><div class="speciesEntryText">Lynx</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Otter');"><div class="speciesEntryText">Otter</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Panther');"><div class="speciesEntryText">Panther</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Protogen');"><div class="speciesEntryText">Protogen</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Rabbit');"><div class="speciesEntryText">Rabbit</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Raccoon');"><div class="speciesEntryText">Raccoon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Red Panda');"><div class="speciesEntryText">Red Panda</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Sergal');"><div class="speciesEntryText">Sergal</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Shark');"><div class="speciesEntryText">Shark</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Skunk');"><div class="speciesEntryText">Skunk</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Snake');"><div class="speciesEntryText">Snake</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Snow Leopard');"><div class="speciesEntryText">Snow Leopard</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Synth');"><div class="speciesEntryText">Synth</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Tiger');"><div class="speciesEntryText">Tiger</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Wolf');"><div class="speciesEntryText">Wolf</div></div>
+
+					</div>
+
+					<!--
+				  ____          _
+				 / ___|   _ ___| |_ ___  _ __ ___
+				| |  | | | / __| __/ _ \| '_ ` _ \
+				| |__| |_| \__ \ || (_) | | | | | |
+				 \____\__,_|___/\__\___/|_| |_| |_|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector2" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('1');"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Custom</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('3');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" id="speciesEntryCustom1" onClick="setSpeciesToCustom(1);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryRight" id="speciesEntryCustom2" onClick="setSpeciesToCustom(2);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryLeft" id="speciesEntryCustom3" onClick="setSpeciesToCustom(3);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryRight" id="speciesEntryCustom4" onClick="setSpeciesToCustom(4);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryLeft" id="speciesEntryCustom5" onClick="setSpeciesToCustom(5);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryRight" id="speciesEntryCustom6" onClick="setSpeciesToCustom(6);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryLeft" id="speciesEntryCustom7" onClick="setSpeciesToCustom(7);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryRight" id="speciesEntryCustom8" onClick="setSpeciesToCustom(8);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryLeftLast" id="speciesEntryCustom9" onClick="setSpeciesToCustom(9);"><div class="speciesEntryText">Empty</div></div>
+						<div class="speciesEntryRightLast" id="speciesEntryCustom10" onClick="setSpeciesToCustom(10);"><div class="speciesEntryText">Empty</div></div>
+
+					</div>
+
+
+					<div class="speciesSelector" id="speciesSelector3" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(2);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Pocket Monsters A-K</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(4);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Absol');"><div class="speciesEntryText">Absol</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Arcanine');"><div class="speciesEntryText">Arcanine</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Blaziken');"><div class="speciesEntryText">Blaziken</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Braixen');"><div class="speciesEntryText">Braixen</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Charizard');"><div class="speciesEntryText">Charizard</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Cinderace');"><div class="speciesEntryText">Cinderace</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Delphox');"><div class="speciesEntryText">Delphox</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Eevee');"><div class="speciesEntryText">Eevee</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Espeon');"><div class="speciesEntryText">Espeon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Flareon');"><div class="speciesEntryText">Flareon</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Gardevoir');"><div class="speciesEntryText">Gardevoir</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Glaceon');"><div class="speciesEntryText">Glaceon</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Incineroar');"><div class="speciesEntryText">Incineroar</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('flygon');"><div class="speciesEntryText">flygon</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Jynx');"><div class="speciesEntryText">Jynx</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Koraidon');"><div class="speciesEntryText">Koraidon</div></div>
+
+					</div>
+
+					<div class="speciesSelector" id="speciesSelector4" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(3);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Pocket Monsters L-Z</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(5);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Leafeon');"><div class="speciesEntryText">Leafeon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Lopunny');"><div class="speciesEntryText">Lopunny</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Lucario');"><div class="speciesEntryText">Lucario</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Lugia');"><div class="speciesEntryText">Lugia</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Magikarp');"><div class="speciesEntryText">Magikarp</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Meowscarada');"><div class="speciesEntryText">Meowscarada</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Mewtwo');"><div class="speciesEntryText">Mewtwo</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Miraidon');"><div class="speciesEntryText">Miraidon</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Pikachu');"><div class="speciesEntryText">Pikachu</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Psyduck');"><div class="speciesEntryText">Psyduck</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Renamon');"><div class="speciesEntryText">Renamon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Salazzle');"><div class="speciesEntryText">Salazzle</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Scorbunny');"><div class="speciesEntryText">Scorbunny</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Sprigatito');"><div class="speciesEntryText">Sprigatito</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Sylveon');"><div class="speciesEntryText">Sylveon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Thyplosion');"><div class="speciesEntryText">Thyplosion</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Umbreon');"><div class="speciesEntryText">Umbreon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Vaporeon');"><div class="speciesEntryText">Vaporeon</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Zangoose');"><div class="speciesEntryText">Zangoose</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Zoroark');"><div class="speciesEntryText">Zoroark</div></div>
+
+					</div>
+
+					<!--
+					_                     _   _
+				   / \   __ _ _   _  __ _| |_(_) ___
+				  / _ \ / _` | | | |/ _` | __| |/ __|
+				 / ___ \ (_| | |_| | (_| | |_| | (__
+				/_/   \_\__, |\__,_|\__,_|\__|_|\___|
+						   |_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector5" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('4');"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Aquatic</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('6');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Alligator');"><div class="speciesEntryText">Alligator</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Crocodile');"><div class="speciesEntryText">Crocodile</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Dolphin');"><div class="speciesEntryText">Dolphin</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Duck');"><div class="speciesEntryText">Duck</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Frog');"><div class="speciesEntryText">Frog</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Orca');"><div class="speciesEntryText">Orca</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Otter');"><div class="speciesEntryText">Otter</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Platypus');"><div class="speciesEntryText">Platypus</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Ray');"><div class="speciesEntryText">Ray</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Seal');"><div class="speciesEntryText">Seal</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Shark');"><div class="speciesEntryText">Shark</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Walrus');"><div class="speciesEntryText">Walrus</div></div>
+						<div class="speciesEntryLast" onClick="setSpeciesTo('Whale');"><div class="speciesEntryText">Whale</div></div>
+
+					</div>
+
+					<!--
+					_         _   _                               _
+				   / \   _ __| |_| |__  _ __ ___  _ __   ___   __| |
+				  / _ \ | '__| __| '_ \| '__/ _ \| '_ \ / _ \ / _` |
+				 / ___ \| |  | |_| | | | | | (_) | |_) | (_) | (_| |
+				/_/   \_\_|   \__|_| |_|_|  \___/| .__/ \___/ \__,_|
+												 |_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector6" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('5');"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Arthropod</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory('7');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Ant');"><div class="speciesEntryText">Ant</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Bee');"><div class="speciesEntryText">Bee</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Butterfly');"><div class="speciesEntryText">Butterfly</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Crab');"><div class="speciesEntryText">Crab</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Moth');"><div class="speciesEntryText">Moth</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Scorpion');"><div class="speciesEntryText">Scorpion</div></div>
+						<div class="speciesEntryLast" onClick="setSpeciesTo('Spider');"><div class="speciesEntryText">Spider</div></div>
+
+					</div>
+
+					<!--
+					_        _
+				   / \__   _(_) __ _ _ __
+				  / _ \ \ / / |/ _` | '_ \
+				 / ___ \ V /| | (_| | | | |
+				/_/   \_\_/ |_|\__,_|_| |_|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector7" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(6);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Avian</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(8);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Avian');"><div class="speciesEntryText">Avian</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Bird');"><div class="speciesEntryText">Bird</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Crow');"><div class="speciesEntryText">Crow</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Eagle');"><div class="speciesEntryText">Eagle</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Gryphon');"><div class="speciesEntryText">Gryphon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Owl');"><div class="speciesEntryText">Owl</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Penguin');"><div class="speciesEntryText">Penguin</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Phoenix');"><div class="speciesEntryText">Phoenix</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Raven');"><div class="speciesEntryText">Raven</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Hawk');"><div class="speciesEntryText">Hawk</div></div>
+
+					</div>
+
+					<!--
+				 ____             _
+				| __ )  _____   _(_)_ __   ___
+				|  _ \ / _ \ \ / / | '_ \ / _ \
+				| |_) | (_) \ V /| | | | |  __/
+				|____/ \___/ \_/ |_|_| |_|\___|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector8" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(7);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Bovine</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(9);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Bison');"><div class="speciesEntryText">Bison</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Buffalo');"><div class="speciesEntryText">Buffalo</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Bull');"><div class="speciesEntryText">Bull</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Cow');"><div class="speciesEntryText">Cow</div></div>
+
+					</div>
+
+					<!--
+				  ____            _
+				 / ___|__ _ _ __ (_)_ __   ___
+				| |   / _` | '_ \| | '_ \ / _ \
+				| |__| (_| | | | | | | | |  __/
+				 \____\__,_|_| |_|_|_| |_|\___|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector9" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(8);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Canine</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(10);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('African Wild Dog');"><div class="speciesEntryText">African Wild Dog</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Arctic Fox');"><div class="speciesEntryText">Arctic Fox</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Coyote');"><div class="speciesEntryText">Coyote</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Dog');"><div class="speciesEntryText">Dog</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Ethiopian Wolf');"><div class="speciesEntryText">Ethiopian Wolf</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Fennec Fox');"><div class="speciesEntryText">Fennec Fox</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Folf');"><div class="speciesEntryText">Folf</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Fox');"><div class="speciesEntryText">Fox</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Husky');"><div class="speciesEntryText">Husky</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Kitsune');"><div class="speciesEntryText">Kitsune</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Maned Wolf');"><div class="speciesEntryText">Maned Wolf</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Werewolf');"><div class="speciesEntryText">Werewolf</div></div>
+						<div class="speciesEntryLast" onClick="setSpeciesTo('Wolf');"><div class="speciesEntryText">Wolf</div></div>
+
+					</div>
+
+					<!--
+				  ____                _
+				 / ___|___ _ ____   _(_)_ __   ___
+				| |   / _ \ '__\ \ / / | '_ \ / _ \
+				| |__|  __/ |   \ V /| | | | |  __/
+				 \____\___|_|    \_/ |_|_| |_|\___|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector10" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(9);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Cervine</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(11);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Deer');"><div class="speciesEntryText">Deer</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Reindeer');"><div class="speciesEntryText">Reindeer</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Elk');"><div class="speciesEntryText">Elk</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Moose');"><div class="speciesEntryText">Moose</div></div>
+
+					</div>
+
+					<!--
+				 _____            _
+				| ____|__ _ _   _(_)_ __   ___
+				|  _| / _` | | | | | '_ \ / _ \
+				| |__| (_| | |_| | | | | |  __/
+				|_____\__, |\__,_|_|_| |_|\___|
+						 |_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector11" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(10);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Equine</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(12);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Donkey');"><div class="speciesEntryText">Donkey</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Horse');"><div class="speciesEntryText">Horse</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Pegasus');"><div class="speciesEntryText">Pegasus</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Pony');"><div class="speciesEntryText">Pony</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Unicorn');"><div class="speciesEntryText">Unicorn</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Zebra');"><div class="speciesEntryText">Zebra</div></div>
+
+					</div>
+
+					<!--
+				 _____    _ _
+				|  ___|__| (_)_ __   ___
+				| |_ / _ \ | | '_ \ / _ \
+				|  _|  __/ | | | | |  __/
+				|_|  \___|_|_|_| |_|\___|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector12" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(11);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Feline</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(13);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Caracal');"><div class="speciesEntryText">Caracal</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Cat');"><div class="speciesEntryText">Cat</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Cheetah');"><div class="speciesEntryText">Cheetah</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Cougar');"><div class="speciesEntryText">Cougar</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Jaguar');"><div class="speciesEntryText">Jaguar</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Khajiit');"><div class="speciesEntryText">Khajiit</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Leopard');"><div class="speciesEntryText">Leopard</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Liger');"><div class="speciesEntryText">Liger</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Lion');"><div class="speciesEntryText">Lion</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Lynx');"><div class="speciesEntryText">Lynx</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Panther');"><div class="speciesEntryText">Panther</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Serval');"><div class="speciesEntryText">Serval</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Snow Leopard');"><div class="speciesEntryText">Snow Leopard</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Tiger');"><div class="speciesEntryText">Tiger</div></div>
+
+					</div>
+
+					<!--
+				 _____ _      _   _                   _
+				|  ___(_) ___| |_(_) ___  _ __   __ _| |
+				| |_  | |/ __| __| |/ _ \| '_ \ / _` | |
+				|  _| | | (__| |_| | (_) | | | | (_| | |
+				|_|   |_|\___|\__|_|\___/|_| |_|\__,_|_|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector13" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(12);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Fictional</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(14);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Argonian');"><div class="speciesEntryText">Argonian</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Dragon');"><div class="speciesEntryText">Dragon</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Gryphon');"><div class="speciesEntryText">Gryphon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Jackalope');"><div class="speciesEntryText">Jackalope</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Khajiit');"><div class="speciesEntryText">Khajiit</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Kitsune');"><div class="speciesEntryText">Kitsune</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Kobold');"><div class="speciesEntryText">Kobold</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Nargacuga');"><div class="speciesEntryText">Nargacuga</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Phoenix');"><div class="speciesEntryText">Phoenix</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Protogen');"><div class="speciesEntryText">Protogen</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Sergal');"><div class="speciesEntryText">Sergal</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Synth');"><div class="speciesEntryText">Synth</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Tanuki');"><div class="speciesEntryText">Tanuki</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Unicorn');"><div class="speciesEntryText">Unicorn</div></div>
+						<div class="speciesEntryLast" onClick="setSpeciesTo('Werewolf');"><div class="speciesEntryText">Werewolf</div></div>
+
+						<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">VRChat</div></div>
+						<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Jex');"><div class="speciesEntryText">Jex</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Nardoragon');"><div class="speciesEntryText">Nardoragon</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Rexouium');"><div class="speciesEntryText">Rexouium</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Wickerbeast');"><div class="speciesEntryText">Wickerbeast</div></div>
+
+					</div>
+
+					<!--
+				 _   _       _          _     _
+				| | | |_   _| |__  _ __(_) __| |
+				| |_| | | | | '_ \| '__| |/ _` |
+				|  _  | |_| | |_) | |  | | (_| |
+				|_| |_|\__, |_.__/|_|  |_|\__,_|
+					   |___/
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector14" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(13);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Hybrid</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(15);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Chimera');"><div class="speciesEntryText">Chimera</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Folf');"><div class="speciesEntryText">Folf</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Foxcoon');"><div class="speciesEntryText">Foxcoon</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Gryphon');"><div class="speciesEntryText">Gryphon</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Liger');"><div class="speciesEntryText">Liger</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Manokit');"><div class="speciesEntryText">Manokit</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Wox');"><div class="speciesEntryText">Wox</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Wusky');"><div class="speciesEntryText">Wusky</div></div>
+
+					</div>
+
+					<!--
+				 _                                                 _
+				| |    __ _  __ _  ___  _ __ ___   ___  _ __ _ __ | |__
+				| |   / _` |/ _` |/ _ \| '_ ` _ \ / _ \| '__| '_ \| '_ \
+				| |__| (_| | (_| | (_) | | | | | | (_) | |  | |_) | | | |
+				|_____\__,_|\__, |\___/|_| |_| |_|\___/|_|  | .__/|_| |_|
+							|___/                           |_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector15" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(14);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Lagomorph</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(16);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Pika');"><div class="speciesEntryText">Pika</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Hare');"><div class="speciesEntryText">Hare</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Jackalope');"><div class="speciesEntryText">Jackalope</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Rabbit');"><div class="speciesEntryText">Rabbit</div></div>
+
+					</div>
+
+					<!--
+				 __  __                            _       _
+				|  \/  | __ _ _ __ ___ _   _ _ __ (_) __ _| |
+				| |\/| |/ _` | '__/ __| | | | '_ \| |/ _` | |
+				| |  | | (_| | |  \__ \ |_| | |_) | | (_| | |
+				|_|  |_|\__,_|_|  |___/\__,_| .__/|_|\__,_|_|
+											|_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector16" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(15);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Marsupial</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(17);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Kangaroo');"><div class="speciesEntryText">Kangaroo</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Koala');"><div class="speciesEntryText">Koala</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Opossum');"><div class="speciesEntryText">Opossum</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Possum');"><div class="speciesEntryText">Possum</div></div>
+
+					</div>
+
+					<!--
+				 __  __           _       _ _     _
+				|  \/  |_   _ ___| |_ ___| (_) __| |
+				| |\/| | | | / __| __/ _ \ | |/ _` |
+				| |  | | |_| \__ \ ||  __/ | | (_| |
+				|_|  |_|\__,_|___/\__\___|_|_|\__,_|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector17" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(16);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Mustelid</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(18);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Badger');"><div class="speciesEntryText">Badger</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Ferret');"><div class="speciesEntryText">Ferret</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Marten');"><div class="speciesEntryText">Marten</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Otter');"><div class="speciesEntryText">Otter</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Skunk');"><div class="speciesEntryText">Skunk</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Weasel');"><div class="speciesEntryText">Weasel</div></div>
+
+					</div>
+
+					<!--
+				 ____            _   _ _
+				|  _ \ ___ _ __ | |_(_) | ___
+				| |_) / _ \ '_ \| __| | |/ _ \
+				|  _ <  __/ |_) | |_| | |  __/
+				|_| \_\___| .__/ \__|_|_|\___|
+						  |_|
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector18" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(17);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Reptile</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(19);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Alligator');"><div class="speciesEntryText">Alligator</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Crocodile');"><div class="speciesEntryText">Crocodile</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Dinosaur');"><div class="speciesEntryText">Dinosaur</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Dragon');"><div class="speciesEntryText">Dragon</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Iguana');"><div class="speciesEntryText">Iguana</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Raptor');"><div class="speciesEntryText">Raptor</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Snake');"><div class="speciesEntryText">Snake</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Turtle');"><div class="speciesEntryText">Turtle</div></div>
+
+					</div>
+
+					<!--
+				 ____           _            _
+				|  _ \ ___   __| | ___ _ __ | |_
+				| |_) / _ \ / _` |/ _ \ '_ \| __|
+				|  _ < (_) | (_| |  __/ | | | |_
+				|_| \_\___/ \__,_|\___|_| |_|\__|
+
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector19" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(18);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Rodent</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(20);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Bat');"><div class="speciesEntryText">Bat</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Beaver');"><div class="speciesEntryText">Beaver</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Hamster');"><div class="speciesEntryText">Hamster</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Mouse');"><div class="speciesEntryText">Mouse</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Porcupine');"><div class="speciesEntryText">Porcupine</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Rat');"><div class="speciesEntryText">Rat</div></div>
+						<div class="speciesEntryLast" onClick="setSpeciesTo('Squirrel');"><div class="speciesEntryText">Squirrel</div></div>
+
+					</div>
+
+					<!--
+				 _   _                   _       _
+				| | | |_ __   __ _ _   _| | __ _| |_ ___
+				| | | | '_ \ / _` | | | | |/ _` | __/ _ \
+				| |_| | | | | (_| | |_| | | (_| | ||  __/
+				 \___/|_| |_|\__, |\__,_|_|\__,_|\__\___|
+							 |___/
+					   -->
+
+					<div class="speciesSelector" id="speciesSelector20" style="display:none">
+
+						<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategoryButton" onClick="speciesGoToCategory(19);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesCategoryName"><div class="categoryText">Ungulate</div></div>
+						<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Gazelle');"><div class="speciesEntryText">Gazelle</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Giraffe');"><div class="speciesEntryText">Giraffe</div></div>
+						<div class="speciesEntryLeft" onClick="setSpeciesTo('Goat');"><div class="speciesEntryText">Goat</div></div>
+						<div class="speciesEntryRight" onClick="setSpeciesTo('Llama');"><div class="speciesEntryText">Llama</div></div>
+						<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Pig');"><div class="speciesEntryText">Pig</div></div>
+						<div class="speciesEntryRightLast" onClick="setSpeciesTo('Sheep');"><div class="speciesEntryText">Sheep</div></div>
+
+					</div>
+
+				</div>
+
+				<div class="search" id="speciesSearch" onClick="speciesLoadList();">
+					<img src="images/search.png" class="magnifyingGlassIcon" height="28" width="28">
+				</div>
+
 			</div>
-			
-		</div>
-		
-		<!--
-  __  __       _                                    
- |  \/  | __ _(_)_ __    _ __ ___   ___ _ __  _   _ 
- | |\/| |/ _` | | '_ \  | '_ ` _ \ / _ \ '_ \| | | |
- | |  | | (_| | | | | | | | | | | |  __/ | | | |_| |
- |_|  |_|\__,_|_|_| |_| |_| |_| |_|\___|_| |_|\__,_|
-                                                    
-		-->
-		
-		<div class="speciesCategorySelectorContainer" id="speciesCategorySelectorContainer" style="display:none">
-		
-			<div class="speciesCategory" onClick="goBackFromCategoryList();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('1');"><div class="speciesCategoryText">Most Popular</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('2');"><div class="speciesCategoryText">Custom</div></div>
-			<div class="speciesCategory" onClick="speciesGoToCategory('3');"><div class="speciesCategoryText">Pocket Monsters A-K</div></div>
-			<div class="speciesCategory" onClick="speciesGoToCategory('4');"><div class="speciesCategoryText">Pocket Monsters L-Z</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('5');"><div class="speciesCategoryText">Aquatic</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('6');"><div class="speciesCategoryText">Arthropod</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('7');"><div class="speciesCategoryText">Avian</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('8');"><div class="speciesCategoryText">Bovine</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('9');"><div class="speciesCategoryText">Canine</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('10');"><div class="speciesCategoryText">Cervine</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('11');"><div class="speciesCategoryText">Equine</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('12');"><div class="speciesCategoryText">Feline</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('13');"><div class="speciesCategoryText">Fictional & VRC</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('14');"><div class="speciesCategoryText">Hybrid</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('15');"><div class="speciesCategoryText">Lagomorph</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('16');"><div class="speciesCategoryText">Marsupial</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('17');"><div class="speciesCategoryText">Mustelid</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('18');"><div class="speciesCategoryText">Reptile</div></div>
-			<div class="speciesEntryLeft" onClick="speciesGoToCategory('19');"><div class="speciesCategoryText">Rodent</div></div>
-			<div class="speciesEntryRight" onClick="speciesGoToCategory('20');"><div class="speciesCategoryText">Ungulate</div></div>
-			
-		</div>
-		
-		<!--
-  __  __           _     ____                   _            
- |  \/  | ___  ___| |_  |  _ \ ___  _ __  _   _| | __ _ _ __ 
- | |\/| |/ _ \/ __| __| | |_) / _ \| '_ \| | | | |/ _` | '__|
- | |  | | (_) \__ \ |_  |  __/ (_) | |_) | |_| | | (_| | |   
- |_|  |_|\___/|___/\__| |_|   \___/| .__/ \__,_|_|\__,_|_|   
-                                   |_|                       
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector1" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Most Popular</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('2');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Arctic Fox');"><div class="speciesEntryText">Arctic Fox</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Bat');"><div class="speciesEntryText">Bat</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Bear');"><div class="speciesEntryText">Bear</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Cat');"><div class="speciesEntryText">Cat</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Cheetah');"><div class="speciesEntryText">Cheetah</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Coyote');"><div class="speciesEntryText">Coyote</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Deer');"><div class="speciesEntryText">Deer</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Dog');"><div class="speciesEntryText">Dog</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Dragon');"><div class="speciesEntryText">Dragon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Fennec');"><div class="speciesEntryText">Fennec</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Fox');"><div class="speciesEntryText">Fox</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Horse');"><div class="speciesEntryText">Horse</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Hyena');"><div class="speciesEntryText">Hyena</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Kangaroo');"><div class="speciesEntryText">Kangaroo</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Lion');"><div class="speciesEntryText">Lion</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Lynx');"><div class="speciesEntryText">Lynx</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Otter');"><div class="speciesEntryText">Otter</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Panther');"><div class="speciesEntryText">Panther</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Protogen');"><div class="speciesEntryText">Protogen</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Rabbit');"><div class="speciesEntryText">Rabbit</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Raccoon');"><div class="speciesEntryText">Raccoon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Red Panda');"><div class="speciesEntryText">Red Panda</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Sergal');"><div class="speciesEntryText">Sergal</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Shark');"><div class="speciesEntryText">Shark</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Skunk');"><div class="speciesEntryText">Skunk</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Snake');"><div class="speciesEntryText">Snake</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Snow Leopard');"><div class="speciesEntryText">Snow Leopard</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Synth');"><div class="speciesEntryText">Synth</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Tiger');"><div class="speciesEntryText">Tiger</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Wolf');"><div class="speciesEntryText">Wolf</div></div>			
-			
-		</div>
-		
-		<!--
-   ____          _                  
-  / ___|   _ ___| |_ ___  _ __ ___  
- | |  | | | / __| __/ _ \| '_ ` _ \ 
- | |__| |_| \__ \ || (_) | | | | | |
-  \____\__,_|___/\__\___/|_| |_| |_|
-                                    
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector2" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('1');"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Custom</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('3');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" id="speciesEntryCustom1" onClick="setSpeciesToCustom(1);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryRight" id="speciesEntryCustom2" onClick="setSpeciesToCustom(2);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryLeft" id="speciesEntryCustom3" onClick="setSpeciesToCustom(3);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryRight" id="speciesEntryCustom4" onClick="setSpeciesToCustom(4);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryLeft" id="speciesEntryCustom5" onClick="setSpeciesToCustom(5);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryRight" id="speciesEntryCustom6" onClick="setSpeciesToCustom(6);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryLeft" id="speciesEntryCustom7" onClick="setSpeciesToCustom(7);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryRight" id="speciesEntryCustom8" onClick="setSpeciesToCustom(8);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryLeftLast" id="speciesEntryCustom9" onClick="setSpeciesToCustom(9);"><div class="speciesEntryText">Empty</div></div>
-			<div class="speciesEntryRightLast" id="speciesEntryCustom10" onClick="setSpeciesToCustom(10);"><div class="speciesEntryText">Empty</div></div>			
-			
-		</div>
-		
-		
-		<div class="speciesSelector" id="speciesSelector3" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(2);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Pocket Monsters A-K</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(4);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Absol');"><div class="speciesEntryText">Absol</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Arcanine');"><div class="speciesEntryText">Arcanine</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Blaziken');"><div class="speciesEntryText">Blaziken</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Braixen');"><div class="speciesEntryText">Braixen</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Charizard');"><div class="speciesEntryText">Charizard</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Cinderace');"><div class="speciesEntryText">Cinderace</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Delphox');"><div class="speciesEntryText">Delphox</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Eevee');"><div class="speciesEntryText">Eevee</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Espeon');"><div class="speciesEntryText">Espeon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Flareon');"><div class="speciesEntryText">Flareon</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Gardevoir');"><div class="speciesEntryText">Gardevoir</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Glaceon');"><div class="speciesEntryText">Glaceon</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Incineroar');"><div class="speciesEntryText">Incineroar</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('flygon');"><div class="speciesEntryText">flygon</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Jynx');"><div class="speciesEntryText">Jynx</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Koraidon');"><div class="speciesEntryText">Koraidon</div></div>
-			
-		</div>
-		
-		<div class="speciesSelector" id="speciesSelector4" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(3);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Pocket Monsters L-Z</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(5);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Leafeon');"><div class="speciesEntryText">Leafeon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Lopunny');"><div class="speciesEntryText">Lopunny</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Lucario');"><div class="speciesEntryText">Lucario</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Lugia');"><div class="speciesEntryText">Lugia</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Magikarp');"><div class="speciesEntryText">Magikarp</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Meowscarada');"><div class="speciesEntryText">Meowscarada</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Mewtwo');"><div class="speciesEntryText">Mewtwo</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Miraidon');"><div class="speciesEntryText">Miraidon</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Pikachu');"><div class="speciesEntryText">Pikachu</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Psyduck');"><div class="speciesEntryText">Psyduck</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Renamon');"><div class="speciesEntryText">Renamon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Salazzle');"><div class="speciesEntryText">Salazzle</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Scorbunny');"><div class="speciesEntryText">Scorbunny</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Sprigatito');"><div class="speciesEntryText">Sprigatito</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Sylveon');"><div class="speciesEntryText">Sylveon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Thyplosion');"><div class="speciesEntryText">Thyplosion</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Umbreon');"><div class="speciesEntryText">Umbreon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Vaporeon');"><div class="speciesEntryText">Vaporeon</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Zangoose');"><div class="speciesEntryText">Zangoose</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Zoroark');"><div class="speciesEntryText">Zoroark</div></div>
-			
-		</div>
-		
-		<!--
-     _                     _   _      
-    / \   __ _ _   _  __ _| |_(_) ___ 
-   / _ \ / _` | | | |/ _` | __| |/ __|
-  / ___ \ (_| | |_| | (_| | |_| | (__ 
- /_/   \_\__, |\__,_|\__,_|\__|_|\___|
-            |_|                       
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector5" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('4');"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Aquatic</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('6');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Alligator');"><div class="speciesEntryText">Alligator</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Crocodile');"><div class="speciesEntryText">Crocodile</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Dolphin');"><div class="speciesEntryText">Dolphin</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Duck');"><div class="speciesEntryText">Duck</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Frog');"><div class="speciesEntryText">Frog</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Orca');"><div class="speciesEntryText">Orca</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Otter');"><div class="speciesEntryText">Otter</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Platypus');"><div class="speciesEntryText">Platypus</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Ray');"><div class="speciesEntryText">Ray</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Seal');"><div class="speciesEntryText">Seal</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Shark');"><div class="speciesEntryText">Shark</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Walrus');"><div class="speciesEntryText">Walrus</div></div>
-			<div class="speciesEntryLast" onClick="setSpeciesTo('Whale');"><div class="speciesEntryText">Whale</div></div>
-			
-		</div>
-		
-		<!--
-     _         _   _                               _ 
-    / \   _ __| |_| |__  _ __ ___  _ __   ___   __| |
-   / _ \ | '__| __| '_ \| '__/ _ \| '_ \ / _ \ / _` |
-  / ___ \| |  | |_| | | | | | (_) | |_) | (_) | (_| |
- /_/   \_\_|   \__|_| |_|_|  \___/| .__/ \___/ \__,_|
-                                  |_|                
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector6" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('5');"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Arthropod</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory('7');"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Ant');"><div class="speciesEntryText">Ant</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Bee');"><div class="speciesEntryText">Bee</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Butterfly');"><div class="speciesEntryText">Butterfly</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Crab');"><div class="speciesEntryText">Crab</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Moth');"><div class="speciesEntryText">Moth</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Scorpion');"><div class="speciesEntryText">Scorpion</div></div>
-			<div class="speciesEntryLast" onClick="setSpeciesTo('Spider');"><div class="speciesEntryText">Spider</div></div>
-			
-		</div>
-		
-		<!--
-     _        _             
-    / \__   _(_) __ _ _ __  
-   / _ \ \ / / |/ _` | '_ \ 
-  / ___ \ V /| | (_| | | | |
- /_/   \_\_/ |_|\__,_|_| |_|
-                            
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector7" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(6);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Avian</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(8);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Avian');"><div class="speciesEntryText">Avian</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Bird');"><div class="speciesEntryText">Bird</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Crow');"><div class="speciesEntryText">Crow</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Eagle');"><div class="speciesEntryText">Eagle</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Gryphon');"><div class="speciesEntryText">Gryphon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Owl');"><div class="speciesEntryText">Owl</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Penguin');"><div class="speciesEntryText">Penguin</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Phoenix');"><div class="speciesEntryText">Phoenix</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Raven');"><div class="speciesEntryText">Raven</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Hawk');"><div class="speciesEntryText">Hawk</div></div>			
-			
+
 		</div>
 
-		<!--
-  ____             _            
- | __ )  _____   _(_)_ __   ___ 
- |  _ \ / _ \ \ / / | '_ \ / _ \
- | |_) | (_) \ V /| | | | |  __/
- |____/ \___/ \_/ |_|_| |_|\___|
-                                
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector8" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(7);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Bovine</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(9);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Bison');"><div class="speciesEntryText">Bison</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Buffalo');"><div class="speciesEntryText">Buffalo</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Bull');"><div class="speciesEntryText">Bull</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Cow');"><div class="speciesEntryText">Cow</div></div>			
-			
-		</div>
-		
-		<!--
-   ____            _            
-  / ___|__ _ _ __ (_)_ __   ___ 
- | |   / _` | '_ \| | '_ \ / _ \
- | |__| (_| | | | | | | | |  __/
-  \____\__,_|_| |_|_|_| |_|\___|
-                                
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector9" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(8);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Canine</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(10);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('African Wild Dog');"><div class="speciesEntryText">African Wild Dog</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Arctic Fox');"><div class="speciesEntryText">Arctic Fox</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Coyote');"><div class="speciesEntryText">Coyote</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Dog');"><div class="speciesEntryText">Dog</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Ethiopian Wolf');"><div class="speciesEntryText">Ethiopian Wolf</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Fennec Fox');"><div class="speciesEntryText">Fennec Fox</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Folf');"><div class="speciesEntryText">Folf</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Fox');"><div class="speciesEntryText">Fox</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Husky');"><div class="speciesEntryText">Husky</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Kitsune');"><div class="speciesEntryText">Kitsune</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Maned Wolf');"><div class="speciesEntryText">Maned Wolf</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Werewolf');"><div class="speciesEntryText">Werewolf</div></div>
-			<div class="speciesEntryLast" onClick="setSpeciesTo('Wolf');"><div class="speciesEntryText">Wolf</div></div>			
-			
-		</div>
-		
-		<!--
-   ____                _            
-  / ___|___ _ ____   _(_)_ __   ___ 
- | |   / _ \ '__\ \ / / | '_ \ / _ \
- | |__|  __/ |   \ V /| | | | |  __/
-  \____\___|_|    \_/ |_|_| |_|\___|
-                                    
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector10" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(9);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Cervine</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(11);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Deer');"><div class="speciesEntryText">Deer</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Reindeer');"><div class="speciesEntryText">Reindeer</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Elk');"><div class="speciesEntryText">Elk</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Moose');"><div class="speciesEntryText">Moose</div></div>			
-			
-		</div>	
-		
-		<!--
-  _____            _            
- | ____|__ _ _   _(_)_ __   ___ 
- |  _| / _` | | | | | '_ \ / _ \
- | |__| (_| | |_| | | | | |  __/
- |_____\__, |\__,_|_|_| |_|\___|
-          |_|                   
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector11" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(10);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Equine</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(12);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Donkey');"><div class="speciesEntryText">Donkey</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Horse');"><div class="speciesEntryText">Horse</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Pegasus');"><div class="speciesEntryText">Pegasus</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Pony');"><div class="speciesEntryText">Pony</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Unicorn');"><div class="speciesEntryText">Unicorn</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Zebra');"><div class="speciesEntryText">Zebra</div></div>			
-			
-		</div>
-		
-		<!--
-  _____    _ _            
- |  ___|__| (_)_ __   ___ 
- | |_ / _ \ | | '_ \ / _ \
- |  _|  __/ | | | | |  __/
- |_|  \___|_|_|_| |_|\___|
-                          
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector12" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(11);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Feline</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(13);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Caracal');"><div class="speciesEntryText">Caracal</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Cat');"><div class="speciesEntryText">Cat</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Cheetah');"><div class="speciesEntryText">Cheetah</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Cougar');"><div class="speciesEntryText">Cougar</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Jaguar');"><div class="speciesEntryText">Jaguar</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Khajiit');"><div class="speciesEntryText">Khajiit</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Leopard');"><div class="speciesEntryText">Leopard</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Liger');"><div class="speciesEntryText">Liger</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Lion');"><div class="speciesEntryText">Lion</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Lynx');"><div class="speciesEntryText">Lynx</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Panther');"><div class="speciesEntryText">Panther</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Serval');"><div class="speciesEntryText">Serval</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Snow Leopard');"><div class="speciesEntryText">Snow Leopard</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Tiger');"><div class="speciesEntryText">Tiger</div></div>			
-			
-		</div>
-		
-		<!--
-  _____ _      _   _                   _ 
- |  ___(_) ___| |_(_) ___  _ __   __ _| |
- | |_  | |/ __| __| |/ _ \| '_ \ / _` | |
- |  _| | | (__| |_| | (_) | | | | (_| | |
- |_|   |_|\___|\__|_|\___/|_| |_|\__,_|_|
-                                         
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector13" style="display:none"> 
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(12);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Fictional</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(14);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Argonian');"><div class="speciesEntryText">Argonian</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Dragon');"><div class="speciesEntryText">Dragon</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Gryphon');"><div class="speciesEntryText">Gryphon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Jackalope');"><div class="speciesEntryText">Jackalope</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Khajiit');"><div class="speciesEntryText">Khajiit</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Kitsune');"><div class="speciesEntryText">Kitsune</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Kobold');"><div class="speciesEntryText">Kobold</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Nargacuga');"><div class="speciesEntryText">Nargacuga</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Phoenix');"><div class="speciesEntryText">Phoenix</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Protogen');"><div class="speciesEntryText">Protogen</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Sergal');"><div class="speciesEntryText">Sergal</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Synth');"><div class="speciesEntryText">Synth</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Tanuki');"><div class="speciesEntryText">Tanuki</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Unicorn');"><div class="speciesEntryText">Unicorn</div></div>
-			<div class="speciesEntryLast" onClick="setSpeciesTo('Werewolf');"><div class="speciesEntryText">Werewolf</div></div>
-			
-			<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">VRChat</div></div>
-			<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Jex');"><div class="speciesEntryText">Jex</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Nardoragon');"><div class="speciesEntryText">Nardoragon</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Rexouium');"><div class="speciesEntryText">Rexouium</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Wickerbeast');"><div class="speciesEntryText">Wickerbeast</div></div>
-			
-		</div>
-		
-		<!--
-  _   _       _          _     _ 
- | | | |_   _| |__  _ __(_) __| |
- | |_| | | | | '_ \| '__| |/ _` |
- |  _  | |_| | |_) | |  | | (_| |
- |_| |_|\__, |_.__/|_|  |_|\__,_|
-        |___/                    
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector14" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(13);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Hybrid</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(15);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Chimera');"><div class="speciesEntryText">Chimera</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Folf');"><div class="speciesEntryText">Folf</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Foxcoon');"><div class="speciesEntryText">Foxcoon</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Gryphon');"><div class="speciesEntryText">Gryphon</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Liger');"><div class="speciesEntryText">Liger</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Manokit');"><div class="speciesEntryText">Manokit</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Wox');"><div class="speciesEntryText">Wox</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Wusky');"><div class="speciesEntryText">Wusky</div></div>			
-			
-		</div>
-		
-		<!--
-  _                                                 _     
- | |    __ _  __ _  ___  _ __ ___   ___  _ __ _ __ | |__  
- | |   / _` |/ _` |/ _ \| '_ ` _ \ / _ \| '__| '_ \| '_ \ 
- | |__| (_| | (_| | (_) | | | | | | (_) | |  | |_) | | | |
- |_____\__,_|\__, |\___/|_| |_| |_|\___/|_|  | .__/|_| |_|
-             |___/                           |_|          
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector15" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(14);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Lagomorph</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(16);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Pika');"><div class="speciesEntryText">Pika</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Hare');"><div class="speciesEntryText">Hare</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Jackalope');"><div class="speciesEntryText">Jackalope</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Rabbit');"><div class="speciesEntryText">Rabbit</div></div>			
-			
-		</div>
-		
-		<!--
-  __  __                            _       _ 
- |  \/  | __ _ _ __ ___ _   _ _ __ (_) __ _| |
- | |\/| |/ _` | '__/ __| | | | '_ \| |/ _` | |
- | |  | | (_| | |  \__ \ |_| | |_) | | (_| | |
- |_|  |_|\__,_|_|  |___/\__,_| .__/|_|\__,_|_|
-                             |_|              
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector16" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(15);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Marsupial</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(17);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Kangaroo');"><div class="speciesEntryText">Kangaroo</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Koala');"><div class="speciesEntryText">Koala</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Opossum');"><div class="speciesEntryText">Opossum</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Possum');"><div class="speciesEntryText">Possum</div></div>			
-			
-		</div>
-		
-		<!--
-  __  __           _       _ _     _ 
- |  \/  |_   _ ___| |_ ___| (_) __| |
- | |\/| | | | / __| __/ _ \ | |/ _` |
- | |  | | |_| \__ \ ||  __/ | | (_| |
- |_|  |_|\__,_|___/\__\___|_|_|\__,_|
-                                     
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector17" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(16);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Mustelid</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(18);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Badger');"><div class="speciesEntryText">Badger</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Ferret');"><div class="speciesEntryText">Ferret</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Marten');"><div class="speciesEntryText">Marten</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Otter');"><div class="speciesEntryText">Otter</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Skunk');"><div class="speciesEntryText">Skunk</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Weasel');"><div class="speciesEntryText">Weasel</div></div>			
-			
-		</div>
-		
-		<!--
-  ____            _   _ _      
- |  _ \ ___ _ __ | |_(_) | ___ 
- | |_) / _ \ '_ \| __| | |/ _ \
- |  _ <  __/ |_) | |_| | |  __/
- |_| \_\___| .__/ \__|_|_|\___|
-           |_|                 
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector18" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(17);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Reptile</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(19);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Alligator');"><div class="speciesEntryText">Alligator</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Crocodile');"><div class="speciesEntryText">Crocodile</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Dinosaur');"><div class="speciesEntryText">Dinosaur</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Dragon');"><div class="speciesEntryText">Dragon</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Iguana');"><div class="speciesEntryText">Iguana</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Raptor');"><div class="speciesEntryText">Raptor</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Snake');"><div class="speciesEntryText">Snake</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Turtle');"><div class="speciesEntryText">Turtle</div></div>			
-			
-		</div>
-		
-		<!--
-  ____           _            _   
- |  _ \ ___   __| | ___ _ __ | |_ 
- | |_) / _ \ / _` |/ _ \ '_ \| __|
- |  _ < (_) | (_| |  __/ | | | |_ 
- |_| \_\___/ \__,_|\___|_| |_|\__|
-                                  
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector19" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(18);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Rodent</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(20);"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Bat');"><div class="speciesEntryText">Bat</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Beaver');"><div class="speciesEntryText">Beaver</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Hamster');"><div class="speciesEntryText">Hamster</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Mouse');"><div class="speciesEntryText">Mouse</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Porcupine');"><div class="speciesEntryText">Porcupine</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Rat');"><div class="speciesEntryText">Rat</div></div>
-			<div class="speciesEntryLast" onClick="setSpeciesTo('Squirrel');"><div class="speciesEntryText">Squirrel</div></div>			
-			
-		</div>
-		
-		<!--
-  _   _                   _       _       
- | | | |_ __   __ _ _   _| | __ _| |_ ___ 
- | | | | '_ \ / _` | | | | |/ _` | __/ _ \
- | |_| | | | | (_| | |_| | | (_| | ||  __/
-  \___/|_| |_|\__, |\__,_|_|\__,_|\__\___|
-              |___/                       
-		-->
-		
-		<div class="speciesSelector" id="speciesSelector20" style="display:none">
-		
-			<div class="speciesCategory" onClick="speciesGoBackFromCategory();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategoryButton" onClick="speciesGoToCategory(19);"><div class="categoryText"><img src="images/harpoonArrowLeft.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesCategoryName"><div class="categoryText">Ungulate</div></div>
-			<div class="speciesCategoryButtonEnd"><div class="categoryText"><img src="images/harpoonArrowRight.png" class="harpoonArrowImg"></div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Gazelle');"><div class="speciesEntryText">Gazelle</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Giraffe');"><div class="speciesEntryText">Giraffe</div></div>
-			<div class="speciesEntryLeft" onClick="setSpeciesTo('Goat');"><div class="speciesEntryText">Goat</div></div>
-			<div class="speciesEntryRight" onClick="setSpeciesTo('Llama');"><div class="speciesEntryText">Llama</div></div>
-			<div class="speciesEntryLeftLast" onClick="setSpeciesTo('Pig');"><div class="speciesEntryText">Pig</div></div>
-			<div class="speciesEntryRightLast" onClick="setSpeciesTo('Sheep');"><div class="speciesEntryText">Sheep</div></div>			
-			
-		</div>
+		<div class="menuInanimateObjects" id="inanimateObjectsMenu" style="display:none">
 
-	</div>
-	
-	<div class="search" id="speciesSearch" onClick="speciesLoadList();">
-		<img src="images/search.png" class="magnifyingGlassIcon" height="28" width="28">
-	</div>
-	
-	</div>
-	
-</div> 
-
-<div class="menuInanimateObjects" id="inanimateObjectsMenu" style="display:none">
-
-	<div class="speciesText">
-	fetishes
-	</div>
-
-	<div class="selectMenuContainer">
-	
-	<div class="lines">
-		<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="speciesContainer" id="inanimateObjectsContainer">
-		
-		<div class="speciesCurrentContainer" id="inanimateObjectsCurrentContainer" onClick="inanimateObjectsLoadList();">
-		
-			<div class="speciesCurrent" id="inanimateObjectsCurrent">
-				Default
+			<div class="speciesText">
+				fetishes
 			</div>
-				
-			<div class="speciesSelectTriangle">
-				<img src="images/speciesSelectTriangle.png" height="14" width="18"> 
+
+			<div class="selectMenuContainer">
+
+				<div class="lines">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="speciesContainer" id="inanimateObjectsContainer">
+
+					<div class="speciesCurrentContainer" id="inanimateObjectsCurrentContainer" onClick="inanimateObjectsLoadList();">
+
+						<div class="speciesCurrent" id="inanimateObjectsCurrent">
+							Default
+						</div>
+
+						<div class="speciesSelectTriangle">
+							<img src="images/speciesSelectTriangle.png" height="14" width="18">
+						</div>
+
+					</div>
+
+					<!--
+				 ___                   _                 _          ___  _     _           _
+				|_ _|_ __   __ _ _ __ (_)_ __ ___   __ _| |_ ___   / _ \| |__ (_) ___  ___| |_ ___
+				 | || '_ \ / _` | '_ \| | '_ ` _ \ / _` | __/ _ \ | | | | '_ \| |/ _ \/ __| __/ __|
+				 | || | | | (_| | | | | | | | | | | (_| | ||  __/ | |_| | |_) | |  __/ (__| |_\__ \
+				|___|_| |_|\__,_|_| |_|_|_| |_| |_|\__,_|\__\___|  \___/|_.__// |\___|\___|\__|___/
+																			|__/
+					   -->
+
+					<div class="speciesCategorySelectorContainer" id="inanimateObjectsSelectorContainer" style="display:none">
+
+						<div class="speciesCategory" onClick="goBackFromInanimateObjectsList();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategory" onClick="inanimateObjectsGoToPredefinedCategory();"><div class="speciesCategoryText">hewwe</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry1" onClick="setInanimateObjectToCustom(1);"><div class="speciesCategoryText">gyy</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry2" onClick="setInanimateObjectToCustom(2);"><div class="speciesCategoryText">gregey</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry3" onClick="setInanimateObjectToCustom(3);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry4" onClick="setInanimateObjectToCustom(4);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry5" onClick="setInanimateObjectToCustom(5);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry6" onClick="setInanimateObjectToCustom(6);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry7" onClick="setInanimateObjectToCustom(7);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry8" onClick="setInanimateObjectToCustom(8);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry9" onClick="setInanimateObjectToCustom(9);"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory" id="inanimateObjectEntry10" onClick="setInanimateObjectToCustom(10);"><div class="speciesCategoryText">Empty</div></div>
+
+					</div>
+
+					<div class="speciesCategorySelectorContainer" id="inanimateObjectsPredefinedSelectorContainer" style="display:none">
+
+						<div class="speciesCategory" onClick="goBackFromPredefinedInanimateObjectsList();"><div class="speciesCategoryText">Go back</div></div>
+						<div class="speciesCategory" onClick="funniestShitIveEverSeen();"><div class="speciesCategoryText">Pickle</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Ety</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
+						<div class="speciesCategoryLast"><div class="speciesCategoryText">Empty</div></div>
+
+					</div>
+
+				</div>
+
+				<div class="search" id="inanimateObjectsSearch" onClick="inanimateObjectsLoadList();">
+					<img src="images/search.png" class="magnifyingGlassIcon" height="28" width="28">
+				</div>
 			</div>
-			
+
 		</div>
-		
-		<!--
-  ___                   _                 _          ___  _     _           _       
- |_ _|_ __   __ _ _ __ (_)_ __ ___   __ _| |_ ___   / _ \| |__ (_) ___  ___| |_ ___ 
-  | || '_ \ / _` | '_ \| | '_ ` _ \ / _` | __/ _ \ | | | | '_ \| |/ _ \/ __| __/ __|
-  | || | | | (_| | | | | | | | | | | (_| | ||  __/ | |_| | |_) | |  __/ (__| |_\__ \
- |___|_| |_|\__,_|_| |_|_|_| |_| |_|\__,_|\__\___|  \___/|_.__// |\___|\___|\__|___/
-                                                             |__/                   
-		-->
-		
-		<div class="speciesCategorySelectorContainer" id="inanimateObjectsSelectorContainer" style="display:none">
-		
-			<div class="speciesCategory" onClick="goBackFromInanimateObjectsList();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategory" onClick="inanimateObjectsGoToPredefinedCategory();"><div class="speciesCategoryText">hewwe</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry1" onClick="setInanimateObjectToCustom(1);"><div class="speciesCategoryText">gyy</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry2" onClick="setInanimateObjectToCustom(2);"><div class="speciesCategoryText">gregey</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry3" onClick="setInanimateObjectToCustom(3);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry4" onClick="setInanimateObjectToCustom(4);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry5" onClick="setInanimateObjectToCustom(5);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry6" onClick="setInanimateObjectToCustom(6);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry7" onClick="setInanimateObjectToCustom(7);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry8" onClick="setInanimateObjectToCustom(8);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry9" onClick="setInanimateObjectToCustom(9);"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory" id="inanimateObjectEntry10" onClick="setInanimateObjectToCustom(10);"><div class="speciesCategoryText">Empty</div></div>
-			
-		</div>
-		
-		<div class="speciesCategorySelectorContainer" id="inanimateObjectsPredefinedSelectorContainer" style="display:none">
-		
-			<div class="speciesCategory" onClick="goBackFromPredefinedInanimateObjectsList();"><div class="speciesCategoryText">Go back</div></div>
-			<div class="speciesCategory" onClick="funniestShitIveEverSeen();"><div class="speciesCategoryText">Pickle</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Ety</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategory"><div class="speciesCategoryText">Empty</div></div>
-			<div class="speciesCategoryLast"><div class="speciesCategoryText">Empty</div></div>
-			
-		</div>
-	
-	</div>
-	
-	<div class="search" id="inanimateObjectsSearch" onClick="inanimateObjectsLoadList();">
-		<img src="images/search.png" class="magnifyingGlassIcon" height="28" width="28"> 
-	</div>
-</div> 
 
-</div>
+		<div class="menuInanimateObjects" id="customDropdownMenu" style="display:none">
 
-<div class="menuInanimateObjects" id="customDropdownMenu" style="display:none">
-
-	<div class="speciesText" id="customDropdownLabel">
-	Label
-	</div>
-
-	<div class="selectMenuContainer">
-	
-	<div class="lines">
-		<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="speciesContainer">
-		
-		<div class="speciesCurrentContainer">
-		
-			<div class="speciesCurrent" id="customDropdownValue">
-				Value
+			<div class="speciesText" id="customDropdownLabel">
+				Label
 			</div>
-				
-			<div class="speciesSelectTriangle">
-				<img src="images/speciesSelectTriangle.png" height="14" width="18"> 
+
+			<div class="selectMenuContainer">
+
+				<div class="lines">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="speciesContainer">
+
+					<div class="speciesCurrentContainer">
+
+						<div class="speciesCurrent" id="customDropdownValue">
+							Value
+						</div>
+
+						<div class="speciesSelectTriangle">
+							<img src="images/speciesSelectTriangle.png" height="14" width="18">
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="search">
+					<img src="images/search.png" class="magnifyingGlassIcon" height="28" width="28">
+				</div>
 			</div>
-			
+
 		</div>
-			
-	</div>
-	
-	<div class="search">
-		<img src="images/search.png" class="magnifyingGlassIcon" height="28" width="28"> 
-	</div>
-</div> 
 
-</div>
-  
-<div class="menu" id="sexMenu">
+		<div class="menu" id="sexMenu">
 
-	<div class="speciesText">
-	Sex
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/lines.png" height="17" width="23" id="linesNormal"> 
+			<div class="speciesText">
+				Sex
+			</div>
+
+			<div class="selectMenuContainer2">
+				<div class="linesSex">
+					<img src="images/lines.png" height="17" width="23" id="linesNormal">
+				</div>
+
+
+				<div class="containerRBMale" id="containerRBMale">
+					<label class="container" id="RBMaleContainer">
+						Male
+						<input type="radio" name="sex" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonMale">
+						<span class="radiobuttonMale"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther" id="containerRBFemale">
+					<label class="container" id="RBFemaleContainer">
+						Female
+						<input type="radio" name="sex" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonFemale">
+						<span class="radiobuttonFemale"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther" id="containerRBOther" style="display:none">
+					<label class="container" id="RBOtherContainer">
+						<div id="thirdSexValue">Other</div>
+						<input type="radio" name="sex" onClick="saveSex('Other');" id="radiobuttonOther">
+						<span class="radiobuttonFemale"></span>
+					</label>
+				</div>
+
+			</div>
+
 		</div>
-			
-			
-		<div class="containerRBMale" id="containerRBMale">
-		<label class="container" id="RBMaleContainer">Male
-			<input type="radio" name="sex" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonMale">
-			<span class="radiobuttonMale"></span>
-		</label>
+
+		<!-- Voice pitch menu — added -->
+		<div class="menu" id="voicePitchMenu">
+
+			<div class="speciesText">
+				Voice pitch
+			</div>
+
+			<div class="selectMenuContainer2">
+				<div class="linesSex">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="containerRBMale" id="containerRBVoiceHigh">
+					<label class="container" id="RBVoiceHighContainer">
+						High pitch
+						<input type="radio" name="voicePitch" value="High pitch" onClick="localStorage.setItem('Slot0_Voice_Pitch','High pitch');showProcessingAnimation();" id="radiobuttonVoiceHigh">
+						<span class="radiobuttonMale"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther" id="containerRBVoiceLow">
+					<label class="container" id="RBVoiceLowContainer">
+						Low pitch
+						<input type="radio" name="voicePitch" value="Low pitch" onClick="localStorage.setItem('Slot0_Voice_Pitch','Low pitch');showProcessingAnimation();" id="radiobuttonVoiceLow">
+						<span class="radiobuttonFemale"></span>
+					</label>
+				</div>
+
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="containerRBFemale">
-		<label class="container" id="RBFemaleContainer">Female
-			<input type="radio" name="sex" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonFemale">
-			<span class="radiobuttonFemale"></span>
-		</label>
+
+		<div class="menu" id="sexMenuError" style="display:none">
+
+			<div class="speciesText" style="color:#FF4550">
+				Sex
+			</div>
+
+			<div class="selectMenuContainer2">
+				<div class="linesSex">
+					<img src="images/linesError.png" height="17" width="23" id="linesError">
+				</div>
+
+
+				<div class="containerRBMale">
+					<label class="container" style="color:#FF4550">
+						Male
+						<input type="radio" id="radiobuttonMaleError" name="sexErrorMale">
+						<span class="radiobuttonMaleError"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther">
+					<label class="container" style="color:#FF4550">
+						Female
+						<input type="radio" id="radiobuttonFemaleError" name="sexErrorFemale">
+						<span class="radiobuttonFemaleError"></span>
+					</label>
+				</div>
+				<script>
+					document.getElementById("radiobuttonMaleError").checked = true;
+					document.getElementById("radiobuttonFemaleError").checked = true;
+				</script>
+
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="containerRBOther" style="display:none">
-		<label class="container" id="RBOtherContainer"><div id="thirdSexValue">Other</div>
-			<input type="radio" name="sex" onClick="saveSex('Other');" id="radiobuttonOther">
-			<span class="radiobuttonFemale"></span>
-		</label>
+
+		<div class="menu" id="customRadioInput1Menu" style="display:none">
+
+			<div class="speciesText" id="customRadioInput1Label">
+				Custom Radio Input 1
+			</div>
+
+			<div class="selectMenuContainer2">
+				<div class="linesSex">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="containerRBMale" id="CRI1Container1">
+					<label class="container" id="CRI1Container21">
+						<div id="CRI1value1">Value1</div>
+						<input type="radio" name="custom1" onClick="saveCustomRadioInput(1,1)" id="radiobuttonCustom1Value1">
+						<span class="radiobuttonMale"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther" id="CRI1Container2">
+					<label class="container" id="CRI1Container22">
+						<div id="CRI1value2">Value2</div>
+						<input type="radio" name="custom1" onClick="saveCustomRadioInput(1,2)" id="radiobuttonCustom1Value2">
+						<span class="radiobuttonFemale"></span>
+					</label>
+				</div>
+
+			</div>
+
 		</div>
-		
-	</div>
-	
-</div>
 
-<div class="menu" id="voicemenu">
+		<div class="menu" id="customRadioInput2Menu" style="display:none">
 
-	<div class="speciesText">
-	Voice
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/lines.png" height="17" width="23" id="linesNormal"> 
+			<div class="speciesText" id="customRadioInput2Label">
+				Custom Radio Input 2
+			</div>
+
+			<div class="selectMenuContainer2">
+				<div class="linesSex">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="containerRBMale" id="CRI2Container1">
+					<label class="container" id="CRI2Container21">
+						<div id="CRI2value1">Value1</div>
+						<input type="radio" name="custom2" onClick="saveCustomRadioInput(2,1)" id="radiobuttonCustom2Value1">
+						<span class="radiobuttonMale"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther" id="CRI2Container2">
+					<label class="container" id="CRI2Container22">
+						<div id="CRI2value2">Value2</div>
+						<input type="radio" name="custom2" onClick="saveCustomRadioInput(2,2)" id="radiobuttonCustom2Value2">
+						<span class="radiobuttonFemale"></span>
+					</label>
+				</div>
+
+			</div>
+
 		</div>
-			
-			
-		<div class="containerRBMale" id="containerRBMale">
-		<label class="container" id="RBMaleContainer">High pitch
-			<input type="radio" name="voice" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonhigh">
-			<span class="radiobuttonhigh"></span>
-		</label>
+
+		<div class="menu" id="customRadioInput3Menu" style="display:none">
+
+			<div class="speciesText" id="customRadioInput3Label">
+				Custom Radio Input 3
+			</div>
+
+			<div class="selectMenuContainer2">
+				<div class="linesSex">
+					<img src="images/lines.png" height="17" width="23">
+				</div>
+
+				<div class="containerRBMale" id="CRI3Container1">
+					<label class="container" id="CRI3Container21">
+						<div id="CRI3value1">Value1</div>
+						<input type="radio" name="custom3" onClick="saveCustomRadioInput(3,1)" id="radiobuttonCustom3Value1">
+						<span class="radiobuttonMale"></span>
+					</label>
+				</div>
+
+				<div class="containerRBFemaleAndOther" id="CRI3Container2">
+					<label class="container" id="CRI3Container22">
+						<div id="CRI3value2">Value2</div>
+						<input type="radio" name="custom3" onClick="saveCustomRadioInput(3,2)" id="radiobuttonCustom3Value2">
+						<span class="radiobuttonFemale"></span>
+					</label>
+				</div>
+
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="containerRBFemale">
-		<label class="container" id="RBFemaleContainer">Low pitch
-			<input type="radio" name="voice" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonlow">
-			<span class="radiobuttonlow"></span>
-		</label>
+
+		<div class="menu" id="genitalsMenu" style="display:none;">
+
+			<div class="speciesText">
+				Genitals
+			</div>
+
+			<div class="linesGenitals">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="menutextGenitals">
+				<label class="container" id="genitalsPenisContainer">
+					Penis
+					<input type="checkbox" id="genitalsPenisCheckbox" onclick="saveCheckboxGenitalsPenis()">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
+			<div class="menutextGenitals" style="margin-left:78px">
+				<label class="container" id="genitalsVaginaContainer">
+					b4bomber
+					<input type="checkbox" id="genitalsVaginaCheckbox" onclick="saveCheckboxGenitalsVagina()">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
 		</div>
-		
-	</div>
-	
-</div>
 
-<div class="menu" id="Morningwood">
+		<div class="adaptClothing menu" id="adaptClothing">
 
-	<div class="speciesText">
-	Morning wood
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/lines.png" height="17" width="23" id="linesNormal"> 
+
+			<div class="linesAC">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="menutextAC">
+				<label class="container" id="adaptClothingContainer">
+					fish mode
+					<input type="checkbox" id="adaptClothingCheckbox" onclick="saveCheckbox()">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
 		</div>
-			
-			
-		<div class="containerRBMale" id="containerRBMale">
-		<label class="container" id="RBMaleContainer">Yes
-			<input type="radio" name="sex" onClick="saveSex('Male');MSSErrorChance();" id="radiobuttonMale">
-			<span class="radiobuttonMale"></span>
-		</label>
+
+		<div class="menu" id="customCheckbox1Menu" style="display:none;">
+
+			<div class="speciesText" id="customCheckbox1LabelMenu">
+				&nbsp;
+			</div>
+
+			<div class="linesGenitals">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="menutextGenitals">
+				<label class="container" id="CC1value1Container">
+					<div id="CC1value1">&nbsp;</div>
+					<input type="checkbox" id="CC1value1Checkbox" onClick="saveCheckboxCustom(1,1)">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
+			<div class="menutextGenitals" style="margin-left:78px" id="secondCheckboxCC1">
+				<label class="container" id="CC1value2Container">
+					<div id="CC1value2">&nbsp;</div>
+					<input type="checkbox" id="CC1value2Checkbox" onClick="saveCheckboxCustom(1,2)">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="containerRBFemale">
-		<label class="container" id="RBFemaleContainer">No
-			<input type="radio" name="sex" onClick="saveSex('Female');MSSErrorChance();" id="radiobuttonFemale">
-			<span class="radiobuttonFemale"></span>
-		</label>
+
+		<div class="menu" id="customCheckbox2Menu" style="display:none;">
+
+			<div class="speciesText" id="customCheckbox2LabelMenu">
+				&nbsp;
+			</div>
+
+			<div class="linesGenitals">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="menutextGenitals">
+				<label class="container" id="CC2value1Container">
+					<div id="CC2value1">&nbsp;</div>
+					<input type="checkbox" id="CC2value1Checkbox" onClick="saveCheckboxCustom(2,1)">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
+			<div class="menutextGenitals" style="margin-left:78px" id="secondCheckboxCC2">
+				<label class="container" id="CC2value2Container">
+					<div id="CC2value2">&nbsp;</div>
+					<input type="checkbox" id="CC2value2Checkbox" onClick="saveCheckboxCustom(2,2)">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
 		</div>
-		
-	</div>
-	
-</div>
 
+		<div class="menu" id="customCheckbox3Menu" style="display:none;">
 
-<div class="menu" id="sexMenuError" style="display:none">
+			<div class="speciesText" id="customCheckbox3LabelMenu">
+				&nbsp;
+			</div>
 
-	<div class="speciesText" style="color:#FF4550">
-	Sex
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/linesError.png" height="17" width="23" id="linesError"> 
+			<div class="linesGenitals">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="menutextGenitals">
+				<label class="container" id="CC3value1Container">
+					<div id="CC3value1">&nbsp;</div>
+					<input type="checkbox" id="CC3value1Checkbox" onClick="saveCheckboxCustom(3,1)">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
+			<div class="menutextGenitals" style="margin-left:78px" id="secondCheckboxCC3">
+				<label class="container" id="CC3value2Container">
+					<div id="CC3value2">&nbsp;</div>
+					<input type="checkbox" id="CC3value2Checkbox" onClick="saveCheckboxCustom(3,2)">
+					<span class="checkbox"></span>
+				</label>
+			</div>
+
 		</div>
-			
-			
-		<div class="containerRBMale">
-		<label class="container" style="color:#FF4550">Male
-			<input type="radio" id="radiobuttonMaleError" name="sexErrorMale" >
-			<span class="radiobuttonMaleError"></span>
-		</label>
+
+		<div class="error621" id="error621" style="display:none">
+
+			<p style="font-size: 30px; margin: 20px">UwU</p>
+
+			Error621//multisliders//processing... <br>
+			initializing reboot... <br>
+			reboot failed... <br>
+			<br>
+			Please contact Switcher-Roo support for assistance
+			<br><br><br>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther">
-		<label class="container" style="color:#FF4550">Female
-			<input type="radio" id="radiobuttonFemaleError" name="sexErrorFemale" >
-			<span class="radiobuttonFemaleError"></span>
-		</label>
+
+		<div class="menuSlider" id="bodyType1Slider">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft">
+				Masculine
+			</div>
+
+			<div class="textinmenuCenter">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuRight">
+				Feminine
+			</div>
+
+			<div id="sliderbodytype" class="slider">
+				<script>
+					var mySlider6 = new dhtmlXSlider(sliderbodytype, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		<script>
-		document.getElementById("radiobuttonMaleError").checked = true;
-		document.getElementById("radiobuttonFemaleError").checked = true;
-		</script>
-		
-	</div>
-			  
-</div>
 
-<div class="menu" id="customRadioInput1Menu" style="display:none">
+		<div class="menuSlider" id="bodyType2Slider">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
 
-	<div class="speciesText" id="customRadioInput1Label">
-	Custom Radio Input 1
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/lines.png" height="17" width="23"> 
+			<div class="textinmenuLeft">
+				Thin
+			</div>
+
+			<div class="textinmenuCenter">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuRight">
+				Thicc
+			</div>
+
+			<div id="sliderwidth" class="slider">
+				<script>
+					var mySlider5 = new dhtmlXSlider(sliderwidth, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="containerRBMale" id="CRI1Container1">
-		<label class="container" id="CRI1Container21"><div id="CRI1value1">Value1</div>
-			<input type="radio" name="custom1" onClick="saveCustomRadioInput(1,1)" id="radiobuttonCustom1Value1">
-			<span class="radiobuttonMale"></span>
-		</label>
+
+		<div class="menuSlider" id="bodyType3Slider">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft">
+				Smol
+			</div>
+
+			<div class="textinmenuCenter">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuRight">
+				Tall
+			</div>
+
+			<div id="sliderheight" class="slider">
+				<script>
+					var mySlider4 = new dhtmlXSlider(sliderheight, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="CRI1Container2">
-		<label class="container" id="CRI1Container22"><div id="CRI1value2">Value2</div>
-			<input type="radio" name="custom1" onClick="saveCustomRadioInput(1,2)" id="radiobuttonCustom1Value2">
-			<span class="radiobuttonFemale"></span>
-		</label>
+
+		<div class="menuSlider" id="custom1SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS1">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS1">
+				Custom1
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS1">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom1" class="slider">
+				<script>
+					var CustomSliderNo1 = new dhtmlXSlider(sliderCustom1, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-	</div>
-	
-</div>
 
-<div class="menu" id="customRadioInput2Menu" style="display:none">
+		<div class="menuSlider" id="custom2SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
 
-	<div class="speciesText" id="customRadioInput2Label">
-	Custom Radio Input 2
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/lines.png" height="17" width="23"> 
+			<div class="textinmenuLeft" id="textinmenuLeftCS2">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS2">
+				Custom2
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS2">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom2" class="slider">
+				<script>
+					var CustomSliderNo2 = new dhtmlXSlider(sliderCustom2, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="containerRBMale" id="CRI2Container1">
-		<label class="container" id="CRI2Container21"><div id="CRI2value1">Value1</div>
-			<input type="radio" name="custom2" onClick="saveCustomRadioInput(2,1)" id="radiobuttonCustom2Value1">
-			<span class="radiobuttonMale"></span>
-		</label>
+
+		<div class="menuSlider" id="custom3SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS3">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS3">
+				Custom3
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS3">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom3" class="slider">
+				<script>
+					var CustomSliderNo3 = new dhtmlXSlider(sliderCustom3, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="CRI2Container2">
-		<label class="container" id="CRI2Container22"><div id="CRI2value2">Value2</div>
-			<input type="radio" name="custom2" onClick="saveCustomRadioInput(2,2)" id="radiobuttonCustom2Value2">
-			<span class="radiobuttonFemale"></span>
-		</label>
+
+		<div class="menuSlider" id="custom4SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS4">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS4">
+				Custom4
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS4">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom4" class="slider">
+				<script>
+					var CustomSliderNo4 = new dhtmlXSlider(sliderCustom4, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-	</div>
-	
-</div>
 
-<div class="menu" id="customRadioInput3Menu" style="display:none">
+		<div class="menuSlider" id="custom5SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
 
-	<div class="speciesText" id="customRadioInput3Label">
-	Custom Radio Input 3
-	</div>
-	
-	<div class="selectMenuContainer2">
-		<div class="linesSex">
-			<img src="images/lines.png" height="17" width="23"> 
+			<div class="textinmenuLeft" id="textinmenuLeftCS5">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS5">
+				Custom5
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS5">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom5" class="slider">
+				<script>
+					var CustomSliderNo5 = new dhtmlXSlider(sliderCustom5, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-			
-		<div class="containerRBMale" id="CRI3Container1">
-		<label class="container" id="CRI3Container21"><div id="CRI3value1">Value1</div>
-			<input type="radio" name="custom3" onClick="saveCustomRadioInput(3,1)" id="radiobuttonCustom3Value1">
-			<span class="radiobuttonMale"></span>
-		</label>
+
+		<div class="menuSlider" id="custom6SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS6">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS6">
+				Custom6
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS6">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom6Container" class="slider">
+				<script>
+					var CustomSliderNo6 = new dhtmlXSlider(sliderCustom6Container, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="containerRBFemaleAndOther" id="CRI3Container2">
-		<label class="container" id="CRI3Container22"><div id="CRI3value2">Value2</div>
-			<input type="radio" name="custom3" onClick="saveCustomRadioInput(3,2)" id="radiobuttonCustom3Value2">
-			<span class="radiobuttonFemale"></span>
-		</label>
+
+		<div class="menuSlider" id="custom7SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS7">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS7">
+				Custom6
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS7">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom7Container" class="slider">
+				<script>
+					var CustomSliderNo7 = new dhtmlXSlider(sliderCustom7Container, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-	</div>
-	
-</div>
 
-<div class="menu" id="genitalsMenu" style="display:none;">
+		<div class="menuSlider" id="custom8SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
 
-	<div class="speciesText">
-	Genitals
-	</div>
-	
-		<div class="linesGenitals">
-			<img src="images/lines.png" height="17" width="23"> 
+			<div class="textinmenuLeft" id="textinmenuLeftCS8">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS8">
+				Custom8
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS8">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom8Container" class="slider">
+				<script>
+					var CustomSliderNo8 = new dhtmlXSlider(sliderCustom8Container, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="menutextGenitals">
-			<label class="container" id="genitalsPenisContainer">Penis
-				<input type="checkbox" id="genitalsPenisCheckbox" onclick="saveCheckboxGenitalsPenis()">
-				<span class="checkbox"></span>  
-			</label>
+
+		<div class="menuSlider" id="custom9SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS9">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS9">
+				Custom9
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS9">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom9Container" class="slider">
+				<script>
+					var CustomSliderNo9 = new dhtmlXSlider(sliderCustom9Container, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-		
-		<div class="menutextGenitals" style="margin-left:78px">
-			<label class="container" id="genitalsVaginaContainer">b4bomber
-				<input type="checkbox" id="genitalsVaginaCheckbox" onclick="saveCheckboxGenitalsVagina()">
-				<span class="checkbox"></span>  
-			</label>
+
+		<div class="menuSlider" id="custom10SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
+			<div class="linesMenuSlider">
+				<img src="images/lines.png" height="17" width="23">
+			</div>
+
+			<div class="textinmenuLeft" id="textinmenuLeftCS10">
+				&nbsp;
+			</div>
+
+			<div class="textinmenuCenter" id="textinmenuCenterCS10">
+				Custom10
+			</div>
+
+			<div class="textinmenuRight" id="textinmenuRightCS10">
+				&nbsp;
+			</div>
+
+			<div id="sliderCustom10Container" class="slider">
+				<script>
+					var CustomSliderNo10 = new dhtmlXSlider(sliderCustom10Container, 315, null, false, 0, 100, 50, 1);
+				</script>
+			</div>
+
 		</div>
-			  
-</div>
-  
-<div class="adaptClothing menu" id="adaptClothing">
 
-	
-		<div class="linesAC">
-			<img src="images/lines.png" height="17" width="23"> 
-		</div>
-		
-		<div class="menutextAC">
-			<label class="container" id="adaptClothingContainer">fish mode 
-				<input type="checkbox" id="adaptClothingCheckbox" onclick="saveCheckbox()">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-		
-</div>
-
-<div class="menu" id="customCheckbox1Menu" style="display:none;">
-
-	<div class="speciesText" id="customCheckbox1LabelMenu">
-	&nbsp;
 	</div>
-	
-		<div class="linesGenitals">
-			<img src="images/lines.png" height="17" width="23"> 
-		</div>
-		
-		<div class="menutextGenitals">
-			<label class="container" id="CC1value1Container"><div id="CC1value1">&nbsp;</div>
-				<input type="checkbox" id="CC1value1Checkbox" onClick="saveCheckboxCustom(1,1)">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-		
-		<div class="menutextGenitals" style="margin-left:78px" id="secondCheckboxCC1">
-			<label class="container" id="CC1value2Container"><div id="CC1value2">&nbsp;</div>
-				<input type="checkbox" id="CC1value2Checkbox" onClick="saveCheckboxCustom(1,2)">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-			  
-</div>
-
-<div class="menu" id="customCheckbox2Menu" style="display:none;">
-
-	<div class="speciesText" id="customCheckbox2LabelMenu">
-	&nbsp;
-	</div>
-	
-		<div class="linesGenitals">
-			<img src="images/lines.png" height="17" width="23"> 
-		</div>
-		
-		<div class="menutextGenitals">
-			<label class="container" id="CC2value1Container"><div id="CC2value1">&nbsp;</div>
-				<input type="checkbox" id="CC2value1Checkbox" onClick="saveCheckboxCustom(2,1)">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-		
-		<div class="menutextGenitals" style="margin-left:78px" id="secondCheckboxCC2">
-			<label class="container" id="CC2value2Container"><div id="CC2value2">&nbsp;</div>
-				<input type="checkbox" id="CC2value2Checkbox" onClick="saveCheckboxCustom(2,2)">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-			  
-</div>
-
-<div class="menu" id="customCheckbox3Menu" style="display:none;">
-
-	<div class="speciesText" id="customCheckbox3LabelMenu">
-	&nbsp;
-	</div>
-	
-		<div class="linesGenitals">
-			<img src="images/lines.png" height="17" width="23"> 
-		</div>
-		
-		<div class="menutextGenitals">
-			<label class="container" id="CC3value1Container"><div id="CC3value1">&nbsp;</div>
-				<input type="checkbox" id="CC3value1Checkbox" onClick="saveCheckboxCustom(3,1)">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-		
-		<div class="menutextGenitals" style="margin-left:78px" id="secondCheckboxCC3">
-			<label class="container" id="CC3value2Container"><div id="CC3value2">&nbsp;</div>
-				<input type="checkbox" id="CC3value2Checkbox" onClick="saveCheckboxCustom(3,2)">
-				<span class="checkbox"></span>  
-			</label>
-		</div>
-			  
-</div>
-
-<div class="error621" id="error621" style="display:none">
-
-<p style="font-size: 30px; margin: 20px">UwU</p> 
-
-Error621//multisliders//processing... <br>
-initializing reboot... <br>
-reboot failed... <br>
-<br>
-Please contact Switcher-Roo support for assistance
-<br><br><br>
-
-</div>
-
-<div class="menuSlider" id="bodyType1Slider">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft">
-	Masculine	
-	</div>
-	
-	<div class="textinmenuCenter">
-	&nbsp;
-	</div>
-	
-	<div class="textinmenuRight">
-	Feminine
-	</div>
-	
-	<div id="sliderbodytype" class="slider">			
-			 <script>
-				var mySlider6 = new dhtmlXSlider(sliderbodytype, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-  
-<div class="menuSlider" id="bodyType2Slider">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft">
-	Thin	
-	</div>
-	
-	<div class="textinmenuCenter">
-	&nbsp;
-	</div>
-	
-	<div class="textinmenuRight">
-	Thicc
-	</div>
-	
-	<div id="sliderwidth" class="slider">			
-			 <script>
-				var mySlider5 = new dhtmlXSlider(sliderwidth, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-  
-<div class="menuSlider" id="bodyType3Slider">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft">
-	Smol	
-	</div>
-	
-	<div class="textinmenuCenter">
-	&nbsp;
-	</div>
-	
-	<div class="textinmenuRight">
-	Tall
-	</div>
-	
-	<div id="sliderheight" class="slider">			
-			 <script>
-				var mySlider4 = new dhtmlXSlider(sliderheight, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-
-<div class="menuSlider" id="custom1SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS1">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS1">
-	Custom1
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS1">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom1" class="slider">			
-			 <script>
-				var CustomSliderNo1 = new dhtmlXSlider(sliderCustom1, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-
-<div class="menuSlider" id="custom2SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS2">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS2">
-	Custom2
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS2">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom2" class="slider">			
-			 <script>
-				var CustomSliderNo2 = new dhtmlXSlider(sliderCustom2, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-
-<div class="menuSlider" id="custom3SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS3">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS3">
-	Custom3
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS3">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom3" class="slider">			
-			 <script>
-				var CustomSliderNo3 = new dhtmlXSlider(sliderCustom3, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-
-<div class="menuSlider" id="custom4SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS4">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS4">
-	Custom4
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS4">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom4" class="slider">			
-			 <script>
-				var CustomSliderNo4 = new dhtmlXSlider(sliderCustom4, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-			
-</div>
-
-<div class="menuSlider" id="custom5SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS5">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS5">
-	Custom5
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS5">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom5" class="slider">			
-			 <script>
-				var CustomSliderNo5 = new dhtmlXSlider(sliderCustom5, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-	
-</div>
-
-<div class="menuSlider" id="custom6SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS6">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS6">
-	Custom6
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS6">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom6Container" class="slider">			
-			 <script>
-				var CustomSliderNo6 = new dhtmlXSlider(sliderCustom6Container, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-	
-</div>
-
-<div class="menuSlider" id="custom7SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS7">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS7">
-	Custom6
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS7">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom7Container" class="slider">			
-			 <script>
-				var CustomSliderNo7 = new dhtmlXSlider(sliderCustom7Container, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-	
-</div>
-
-<div class="menuSlider" id="custom8SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS8">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS8">
-	Custom8
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS8">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom8Container" class="slider">			
-			 <script>
-				var CustomSliderNo8 = new dhtmlXSlider(sliderCustom8Container, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-	
-</div>
-
-<div class="menuSlider" id="custom9SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS9">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS9">
-	Custom9
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS9">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom9Container" class="slider">			
-			 <script>
-				var CustomSliderNo9 = new dhtmlXSlider(sliderCustom9Container, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-	
-</div>
-
-<div class="menuSlider" id="custom10SliderMenu" style="max-height:0;border-bottom:0;padding-bottom:0">
-	<div class="linesMenuSlider">
-			<img src="images/lines.png" height="17" width="23"> 
-	</div>
-	
-	<div class="textinmenuLeft" id="textinmenuLeftCS10">
-	&nbsp;	
-	</div>
-	
-	<div class="textinmenuCenter" id="textinmenuCenterCS10">
-	Custom10
-	</div>
-	
-	<div class="textinmenuRight" id="textinmenuRightCS10">
-	&nbsp;
-	</div>
-	
-	<div id="sliderCustom10Container" class="slider">			
-			 <script>
-				var CustomSliderNo10 = new dhtmlXSlider(sliderCustom10Container, 315, null, false, 0, 100, 50, 1);
-			</script>
-	</div>
-	
-</div>
-
-</div>
 
 <div class="desktop-mode-container">
 
