@@ -5023,6 +5023,12 @@ Minor update 10 • Hotfix 5 •
 
 <script>
 
+    // Add this near the other slider attachEvent calls (bottom of index.html)
+mySliderBladder.attachEvent("onSlideEnd", function () {
+    localStorage.setItem("Slot0_Bladder_Control", mySliderBladder.getValue());
+    showProcessingAnimation();
+});
+
 mySlider6.attachEvent("onSlideEnd", function() {
 	localStorage.setItem("Slot0_Body_Type1", mySlider6.getValue());
 	showProcessingAnimation();
